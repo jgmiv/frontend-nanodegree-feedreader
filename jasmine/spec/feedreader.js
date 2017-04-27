@@ -24,9 +24,9 @@ $(function() {
          * and that the name is not empty.
          */
          it('has a name and name not empty', function(){
-            allFeeds.forEach(function(name){
-                expect(name).toBeDefined();
-                expect(name).not.toBe('');
+            allFeeds.forEach(function(feed){
+                expect(feed.name).toBeDefined();
+                expect(feed.name).not.toBe('');
 
             });
 
@@ -77,7 +77,9 @@ $(function() {
          */
 
         beforeAll(function (done) {
-            loadFeed(0, done);
+            loadFeed(0, function(){
+                done();
+            });
         });
         
         it('has at least a single .entry element within the .feed container.', function(){
@@ -100,7 +102,8 @@ $(function() {
             var i = $('.feed').html();
         });
 
-        it('has content that actually changes', function(){      
+        it('has content that actually changes', function(done){ 
+            loadFeed(1, done);    
             expect($('.feed').html).not.toEqual(i);
 
         }); 
