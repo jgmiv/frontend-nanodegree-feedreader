@@ -24,5 +24,5 @@ We took a mock up blog and built test suites to run different tests based on how
 
 # How to Run:
 
-Ocne project is cloned to your machine, open the file [index.html](index.html) in your web browser and it
+Once project is cloned to your machine, open the file [index.html](index.html) in your web browser and it
 will be displayed.  You can see the different test suites and their test results.  You can also enter the [jasmine/spec/feedreader.js](jasmine/spec/feedreader.js) and try your hand at writing test suites.  Refresh the browser to see if the suites pass or fail.
