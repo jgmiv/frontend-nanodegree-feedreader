@@ -101,7 +101,7 @@ $(function() {
         });
 
         it('has content that actually changes', function(){      
-            expect($('.feed').html()).not.toEqual(i);
+            expect($('.feed').html).not.toEqual(i);
 
         }); 
 
