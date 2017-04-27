@@ -85,27 +85,30 @@ $(function() {
             loadFeed(1, done); 
             var i = $('.feed .entry');
             expect(i.length).toBeGreaterThan(0);
-
+            done();
         });
  
     }); 
 
     /* Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
-        var i;
+        var oldFeed;
         /* Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-         beforeAll(function(done){
-            loadFeed(0, done);
-            var i = $('.feed').html();
+         beforeAll( function(){
+            loadFeed(1, function() {
+            oldFeed = $('.feed').html();
+            done();
+        });
         });
 
         it('has content that actually changes', function(done){ 
-            loadFeed(1, done);    
-            expect($('.feed').html).not.toEqual(i);
-
+            loadFeed(0, function(){
+            expect($('.feed').html()).not.toEqual(oldFeed);
+            done();
+        });
         }); 
 
 
