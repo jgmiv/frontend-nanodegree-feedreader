@@ -81,7 +81,6 @@ $(function() {
         });
         
         it('has at least a single .entry element within the .feed container.', function(){
-
             var i = $('.feed .entry');
             expect(i.length).toBeGreaterThan(0);
 
@@ -91,19 +90,18 @@ $(function() {
 
     /* Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
-
+        var i;
         /* Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
          beforeAll(function(done){
             loadFeed(0, done);
-            
+            var i = $('.feed').html();
         });
 
-        it('has content that actually changes', function(){
-            var i = $('.feed .entry')[0];
-            expect(i).not.toBe(0);
+        it('has content that actually changes', function(){      
+            expect($('.feed').html()).not.toEqual(i);
 
         }); 
 
