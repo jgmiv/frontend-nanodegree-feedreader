@@ -77,12 +77,12 @@ $(function() {
          */
 
         beforeAll(function (done) {
-            loadFeed(0, function(){
-                done();
-            });
+            loadFeed(0, done);
+        
         });
         
-        it('has at least a single .entry element within the .feed container.', function(){
+        it('has at least a single .entry element within the .feed container.', function(done){
+            loadFeed(1, done); 
             var i = $('.feed .entry');
             expect(i.length).toBeGreaterThan(0);
 
