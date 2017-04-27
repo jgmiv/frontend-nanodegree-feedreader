@@ -20,8 +20,7 @@ We took a mock up blog and built test suites to run different tests based on how
 * [Stackoverflow](https://stackoverflow.com/)
 * [W3Schools](https://www.w3schools.com/)
 * [Jasmine](https://jasmine.github.io/2.0/introduction.html#section-Asynchronous_Support)
-* [Wikipedia API](https://en.wikipedia.org/wiki/List_of_news_media_APIs)
-* [Udacity Forums](https://discussions.udacity.com/c/nd001-front-end-broadcast)
+* Mostly [Udacity Forums](https://discussions.udacity.com/c/nd001-front-end-broadcast)
 
 # How to Run:
 
